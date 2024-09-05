@@ -1,0 +1,401 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'reloj'
+Slack : -2.820
+TNS   : -106.018
+
+Type  : Slow 1200mV 85C Model Setup 'reloj_contador:reloj1|segundo'
+Slack : -0.381
+TNS   : -1.213
+
+Type  : Slow 1200mV 85C Model Setup 'reloj_contador:reloj2|segundo'
+Slack : -0.356
+TNS   : -1.080
+
+Type  : Slow 1200mV 85C Model Setup 'reloj_contador:reloj2|n'
+Slack : -0.356
+TNS   : -1.033
+
+Type  : Slow 1200mV 85C Model Setup 'reloj_contador:reloj1|n'
+Slack : -0.342
+TNS   : -0.970
+
+Type  : Slow 1200mV 85C Model Setup 'reloj_contador:reloj1|e'
+Slack : -0.256
+TNS   : -0.441
+
+Type  : Slow 1200mV 85C Model Setup 'reloj_contador:reloj2|e'
+Slack : -0.229
+TNS   : -0.455
+
+Type  : Slow 1200mV 85C Model Hold 'reloj_contador:reloj1|e'
+Slack : 0.348
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'reloj_contador:reloj1|n'
+Slack : 0.348
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'reloj_contador:reloj1|segundo'
+Slack : 0.348
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'reloj_contador:reloj2|e'
+Slack : 0.348
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'reloj_contador:reloj2|n'
+Slack : 0.348
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'reloj_contador:reloj2|segundo'
+Slack : 0.348
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'reloj'
+Slack : 0.624
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'reloj_contador:reloj1|segundo'
+Slack : -1.594
+TNS   : -7.970
+
+Type  : Slow 1200mV 85C Model Recovery 'reloj_contador:reloj2|segundo'
+Slack : -1.349
+TNS   : -6.745
+
+Type  : Slow 1200mV 85C Model Recovery 'reloj_contador:reloj1|n'
+Slack : -1.299
+TNS   : -6.495
+
+Type  : Slow 1200mV 85C Model Recovery 'reloj_contador:reloj1|e'
+Slack : -0.985
+TNS   : -3.940
+
+Type  : Slow 1200mV 85C Model Recovery 'reloj_contador:reloj2|e'
+Slack : -0.912
+TNS   : -3.648
+
+Type  : Slow 1200mV 85C Model Recovery 'reloj_contador:reloj2|n'
+Slack : -0.614
+TNS   : -3.070
+
+Type  : Slow 1200mV 85C Model Removal 'reloj_contador:reloj2|n'
+Slack : 1.000
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'reloj_contador:reloj2|e'
+Slack : 1.313
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'reloj_contador:reloj1|e'
+Slack : 1.393
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'reloj_contador:reloj1|n'
+Slack : 1.710
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'reloj_contador:reloj2|segundo'
+Slack : 1.760
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'reloj_contador:reloj1|segundo'
+Slack : 2.025
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'reloj'
+Slack : -3.000
+TNS   : -85.777
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'reloj_contador:reloj1|n'
+Slack : -1.403
+TNS   : -7.015
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'reloj_contador:reloj1|segundo'
+Slack : -1.403
+TNS   : -7.015
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'reloj_contador:reloj2|n'
+Slack : -1.403
+TNS   : -7.015
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'reloj_contador:reloj2|segundo'
+Slack : -1.403
+TNS   : -7.015
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'reloj_contador:reloj1|e'
+Slack : -1.403
+TNS   : -5.612
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'reloj_contador:reloj2|e'
+Slack : -1.403
+TNS   : -5.612
+
+Type  : Slow 1200mV 0C Model Setup 'reloj'
+Slack : -2.539
+TNS   : -90.794
+
+Type  : Slow 1200mV 0C Model Setup 'reloj_contador:reloj1|segundo'
+Slack : -0.255
+TNS   : -0.751
+
+Type  : Slow 1200mV 0C Model Setup 'reloj_contador:reloj2|segundo'
+Slack : -0.231
+TNS   : -0.626
+
+Type  : Slow 1200mV 0C Model Setup 'reloj_contador:reloj2|n'
+Slack : -0.228
+TNS   : -0.582
+
+Type  : Slow 1200mV 0C Model Setup 'reloj_contador:reloj1|n'
+Slack : -0.219
+TNS   : -0.522
+
+Type  : Slow 1200mV 0C Model Setup 'reloj_contador:reloj1|e'
+Slack : -0.148
+TNS   : -0.235
+
+Type  : Slow 1200mV 0C Model Setup 'reloj_contador:reloj2|e'
+Slack : -0.122
+TNS   : -0.241
+
+Type  : Slow 1200mV 0C Model Hold 'reloj_contador:reloj1|e'
+Slack : 0.312
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'reloj_contador:reloj1|n'
+Slack : 0.312
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'reloj_contador:reloj1|segundo'
+Slack : 0.312
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'reloj_contador:reloj2|e'
+Slack : 0.312
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'reloj_contador:reloj2|n'
+Slack : 0.312
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'reloj_contador:reloj2|segundo'
+Slack : 0.312
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'reloj'
+Slack : 0.574
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'reloj_contador:reloj1|segundo'
+Slack : -1.388
+TNS   : -6.940
+
+Type  : Slow 1200mV 0C Model Recovery 'reloj_contador:reloj2|segundo'
+Slack : -1.158
+TNS   : -5.790
+
+Type  : Slow 1200mV 0C Model Recovery 'reloj_contador:reloj1|n'
+Slack : -1.100
+TNS   : -5.500
+
+Type  : Slow 1200mV 0C Model Recovery 'reloj_contador:reloj1|e'
+Slack : -0.824
+TNS   : -3.296
+
+Type  : Slow 1200mV 0C Model Recovery 'reloj_contador:reloj2|e'
+Slack : -0.744
+TNS   : -2.976
+
+Type  : Slow 1200mV 0C Model Recovery 'reloj_contador:reloj2|n'
+Slack : -0.478
+TNS   : -2.390
+
+Type  : Slow 1200mV 0C Model Removal 'reloj_contador:reloj2|n'
+Slack : 0.931
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'reloj_contador:reloj2|e'
+Slack : 1.228
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'reloj_contador:reloj1|e'
+Slack : 1.295
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'reloj_contador:reloj1|n'
+Slack : 1.583
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'reloj_contador:reloj2|segundo'
+Slack : 1.637
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'reloj_contador:reloj1|segundo'
+Slack : 1.889
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'reloj'
+Slack : -3.000
+TNS   : -85.777
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'reloj_contador:reloj1|n'
+Slack : -1.403
+TNS   : -7.015
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'reloj_contador:reloj1|segundo'
+Slack : -1.403
+TNS   : -7.015
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'reloj_contador:reloj2|n'
+Slack : -1.403
+TNS   : -7.015
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'reloj_contador:reloj2|segundo'
+Slack : -1.403
+TNS   : -7.015
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'reloj_contador:reloj1|e'
+Slack : -1.403
+TNS   : -5.612
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'reloj_contador:reloj2|e'
+Slack : -1.403
+TNS   : -5.612
+
+Type  : Fast 1200mV 0C Model Setup 'reloj'
+Slack : -0.565
+TNS   : -11.040
+
+Type  : Fast 1200mV 0C Model Setup 'reloj_contador:reloj1|segundo'
+Slack : 0.399
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'reloj_contador:reloj2|n'
+Slack : 0.407
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'reloj_contador:reloj2|segundo'
+Slack : 0.411
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'reloj_contador:reloj1|n'
+Slack : 0.417
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'reloj_contador:reloj1|e'
+Slack : 0.464
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'reloj_contador:reloj2|e'
+Slack : 0.474
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'reloj_contador:reloj1|segundo'
+Slack : 0.151
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'reloj_contador:reloj1|e'
+Slack : 0.152
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'reloj_contador:reloj2|e'
+Slack : 0.152
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'reloj_contador:reloj2|n'
+Slack : 0.152
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'reloj_contador:reloj2|segundo'
+Slack : 0.152
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'reloj_contador:reloj1|n'
+Slack : 0.153
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'reloj'
+Slack : 0.237
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'reloj_contador:reloj1|segundo'
+Slack : -0.230
+TNS   : -1.150
+
+Type  : Fast 1200mV 0C Model Recovery 'reloj_contador:reloj1|n'
+Slack : -0.108
+TNS   : -0.540
+
+Type  : Fast 1200mV 0C Model Recovery 'reloj_contador:reloj2|segundo'
+Slack : -0.104
+TNS   : -0.520
+
+Type  : Fast 1200mV 0C Model Recovery 'reloj_contador:reloj1|e'
+Slack : 0.055
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'reloj_contador:reloj2|e'
+Slack : 0.075
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'reloj_contador:reloj2|n'
+Slack : 0.204
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'reloj_contador:reloj2|n'
+Slack : 0.458
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'reloj_contador:reloj2|e'
+Slack : 0.574
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'reloj_contador:reloj1|e'
+Slack : 0.622
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'reloj_contador:reloj1|n'
+Slack : 0.761
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'reloj_contador:reloj2|segundo'
+Slack : 0.779
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'reloj_contador:reloj1|segundo'
+Slack : 0.885
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'reloj'
+Slack : -3.000
+TNS   : -64.028
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'reloj_contador:reloj1|n'
+Slack : -1.000
+TNS   : -5.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'reloj_contador:reloj1|segundo'
+Slack : -1.000
+TNS   : -5.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'reloj_contador:reloj2|n'
+Slack : -1.000
+TNS   : -5.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'reloj_contador:reloj2|segundo'
+Slack : -1.000
+TNS   : -5.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'reloj_contador:reloj1|e'
+Slack : -1.000
+TNS   : -4.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'reloj_contador:reloj2|e'
+Slack : -1.000
+TNS   : -4.000
+
+------------------------------------------------------------

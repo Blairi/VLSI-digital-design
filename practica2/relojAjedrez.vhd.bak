@@ -1,0 +1,84 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity reloj_ajedrez is
+    Port (
+        reloj: in std_logic;
+        switch: in std_logic; -- Controla cuál reloj está activo
+        reset: in std_logic;
+        L1: out std_logic_vector(6 downto 0); -- Unidades de segundo del reloj 1
+        L2: out std_logic_vector(6 downto 0); -- Decenas de segundo del reloj 1
+        L3: out std_logic_vector(6 downto 0); -- Unidades de minuto del reloj 1
+        L4: out std_logic_vector(6 downto 0); -- Unidades de segundo del reloj 2
+        L5: out std_logic_vector(6 downto 0); -- Decenas de segundo del reloj 2
+        L6: out std_logic_vector(6 downto 0)  -- Unidades de minuto del reloj 2
+    );
+end reloj_ajedrez;
+
+architecture Behavioral of reloj_ajedrez is
+    component reloj_timer
+        Port (
+            reloj: in std_logic;
+            habilitar: in std_logic; -- Cambiado de control a habilitar
+            reset: in std_logic;
+            L1: out std_logic_vector(6 downto 0);
+            L2: out std_logic_vector(6 downto 0);
+            L3: out std_logic_vector(6 downto 0)
+        );
+    end component;
+
+    signal habilitar1: std_logic;
+    signal habilitar2: std_logic;
+    signal reset_global: std_logic;
+    
+    signal L1_int, L2_int, L3_int: std_logic_vector(6 downto 0); -- Señales internas para el reloj 1
+    signal L4_int, L5_int, L6_int: std_logic_vector(6 downto 0); -- Señales internas para el reloj 2
+
+begin
+    -- Control para seleccionar el reloj activo
+    habilitar1 <= switch;
+    habilitar2 <= not switch;
+
+    -- Instancia del primer reloj
+    reloj1: reloj_timer port map (
+        reloj => reloj,
+        habilitar => habilitar1,
+        reset => reset_global,
+        L1 => L1_int,
+        L2 => L2_int,
+        L3 => L3_int
+    );
+
+    -- Instancia del segundo reloj
+    reloj2: reloj_timer port map (
+        reloj => reloj,
+        habilitar => habilitar2,
+        reset => reset_global,
+        L1 => L4_int,
+        L2 => L5_int,
+        L3 => L6_int
+    );
+
+    -- Asignar las señales internas a las salidas
+    L1 <= L1_int;
+    L2 <= L2_int;
+    L3 <= L3_int;
+    L4 <= L4_int;
+    L5 <= L5_int;
+    L6 <= L6_int;
+
+    -- Proceso para detectar si cualquiera de los relojes llega a 0:00
+    process (reloj, L1_int, L2_int, L3_int, L4_int, L5_int, L6_int)
+    begin
+        if rising_edge(reloj) then
+            if (L1_int = "1000000" and L2_int = "1000000" and L3_int = "1000000") or
+               (L4_int = "1000000" and L5_int = "1000000" and L6_int = "1000000") then
+                reset_global <= '1'; -- Reinicia ambos relojes
+            else
+                reset_global <= '0';
+            end if;
+        end if;
+    end process;
+    
+end Behavioral;
+

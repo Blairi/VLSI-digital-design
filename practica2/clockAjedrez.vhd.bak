@@ -1,0 +1,103 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity clockAjedrez is
+    Port (
+		  reset: in std_logic;
+        reloj: in std_logic;
+        switch: in std_logic;  
+        L1: out std_logic_vector(6 downto 0); -- Unidades de segundo del reloj 1
+        L2: out std_logic_vector(6 downto 0); -- Decenas de segundo del reloj 1
+        L3: out std_logic_vector(6 downto 0); -- Unidades de minuto del reloj 1
+        L4: out std_logic_vector(6 downto 0); -- Unidades de segundo del reloj 2
+        L5: out std_logic_vector(6 downto 0); -- Decenas de segundo del reloj 2
+        L6: out std_logic_vector(6 downto 0)  -- Unidades de minuto del reloj 2
+    );
+end clockAjedrez;
+
+architecture Behavioral of clockAjedrez  is
+    component reloj_contador
+        Port (
+            reloj: in std_logic;
+            encender: in std_logic;  
+            reset: in std_logic;
+            L1: out std_logic_vector(6 downto 0);
+            L2: out std_logic_vector(6 downto 0);
+            L3: out std_logic_vector(6 downto 0)
+        );
+    end component;
+
+    -- Señales para habilitar los relojes
+    signal encender1: std_logic;
+    signal encender2: std_logic;
+    signal reset_relojes: std_logic;
+
+    -- Señales internas para los relojes
+	 -- clock 1
+	 signal L1_int: std_logic_vector(6 downto 0);
+	 signal L2_int: std_logic_vector(6 downto 0);
+	 signal L3_int: std_logic_vector(6 downto 0);
+	 -- clock 2
+	 signal L4_int: std_logic_vector(6 downto 0);
+	 signal L5_int: std_logic_vector(6 downto 0);
+	 signal L6_int: std_logic_vector(6 downto 0);
+
+begin
+
+    
+    encender1 <= switch;
+    encender2 <= not switch;
+
+    
+    reloj1: reloj_contador
+        port map (
+            reloj => reloj,
+            encender => encender1,
+            reset => reset_relojes,
+            L1 => L1_int,
+            L2 => L2_int,
+            L3 => L3_int
+        );
+
+    
+    reloj2: reloj_contador
+        port map (
+            reloj => reloj,
+            encender => encender2,
+            reset => reset_relojes,
+            L1 => L4_int,
+            L2 => L5_int,
+            L3 => L6_int
+        );
+    L1 <= L1_int;
+    L2 <= L2_int;
+    L3 <= L3_int;
+    L4 <= L4_int;
+    L5 <= L5_int;
+    L6 <= L6_int;
+
+
+		process (reloj)
+		begin
+			if rising_edge(reloj) then
+				if (L1_int = "1000000" and L2_int = "1000000" and L3_int = "1000000") then
+					reset_relojes <= '1';  -- Reinicia reloj 1
+				else
+					reset_relojes <= '0';
+        end if;
+		end if;
+		end process;
+		
+		process (reloj)
+		begin
+			if rising_edge(reloj) then
+				if (L4_int = "1000000" and L5_int = "1000000" and L6_int = "1000000") then
+					reset_relojes <= '1';  -- Reinicia reloj 2
+				else
+					reset_relojes <= '0';
+        end if;
+    end if;
+		end process;
+
+    
+end Behavioral;
