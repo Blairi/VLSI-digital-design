@@ -19,7 +19,11 @@ entity leds is
 end Leds;
 
 architecture Behavioral of Leds is
-
+	
+	-- CAMBIO
+	-- Dirección de desplazamiento (1 para derecha a izquierda, 0 para izquierda a derecha)
+	signal direccion: std_logic := '1';
+	
 	component divisor is Generic ( N : integer := 24);
 		Port ( reloj : in std_logic;
 			div_reloj : out std_logic);
@@ -70,20 +74,43 @@ architecture Behavioral of Leds is
 		
 		begin
 			if relojCiclo='1' and relojCiclo'event then
-				-- empezamos desde el led 0
-				a0 <= a9;
+			
+				if direccion = '1' then
+					-- Desplazamiento de derecha a izquierda 
+					a0 <= a9;
+					a1 <= a0;
+					a2 <= a1;
+					a3 <= a2;
+					a4 <= a3;
+					a5 <= a4;
+					a6 <= a5;
+					a7 <= a6;
+					a8 <= a7;
+					a9 <= a8;
 				
-				a1 <= a0;
-				a2 <= a1;
-				a3 <= a2;
-				a4 <= a3;
-				a5 <= a4;
-				a6 <= a5;
-				a7 <= a6;
-				a8 <= a7;
-				
-				-- terminamos en el led 9
-				a9 <= a8;
+					-- Invertir dirección al llegar al valor minimo
+					if a9 = X"0A" then
+						direccion <= '0';
+					end if;
+					
+				else
+					 -- Desplazamiento de izquierda a derecha
+					a9 <= a0;
+					a8 <= a9;
+					a7 <= a8;
+					a6 <= a7;
+					a5 <= a6;
+					a4 <= a5;
+					a3 <= a4;
+					a2 <= a3;
+					a1 <= a2;
+					a0 <= a1;
+
+					-- Invertir dirección al llegar al valor maximo
+					if a0 = X"64" then
+						direccion <= '1';
+					end if;
+					end if;
 			end if;
 	end process;
 	
