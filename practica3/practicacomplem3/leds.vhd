@@ -75,18 +75,30 @@ architecture Behavioral of Leds is
 		
 		begin
 			if relojCiclo='1' and relojCiclo'event then
---				a0 <= a9;
---				a1 <= a0;
---				a2 <= a1;
---				a3 <= a2;
---				a4 <= a3;
---				a5 <= a4;
---				a6 <= a5;
---				a7 <= a6;
---				a8 <= a7;
---				a9 <= a8;
+
 				
-				a9 <= a0;
+				
+				if direccionModulo2 = '1' then
+					-- Desplazamiento de derecha a izquierda 
+				a0 <= a9;
+				a1 <= a0;
+				a2 <= a1;
+				a3 <= a2;
+				a4 <= a3;
+				a5 <= a4;
+				a6 <= a5;
+				a7 <= a6;
+				a8 <= a7;
+				a9 <= a8;
+				
+					-- Invertir dirección al llegar al valor minimo
+					if a9 = X"00" then
+						direccionModulo2 <= '0';
+					end if;
+					
+				else
+					 -- Desplazamiento de izquierda a derecha
+					a9 <= a0;
 				a8 <= a9;
 				a7 <= a8;
 				a6 <= a7;
@@ -96,6 +108,12 @@ architecture Behavioral of Leds is
 				a2 <= a3;
 				a1 <= a2;
 				a0 <= a1;
+
+					-- Invertir dirección al llegar al valor maximo
+					if a0 = X"50" then
+						direccionModulo2 <= '1';
+					end if;
+					end if;
 			end if;
 	end process;
 	
