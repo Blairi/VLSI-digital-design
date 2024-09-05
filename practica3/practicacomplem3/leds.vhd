@@ -43,15 +43,15 @@ architecture Behavioral of Leds is
 	-- El porcentaje es incorrecto, ya que se debe  calcular en base a l rango de la cuenta, es decir,
 	--Sacar el 10% de 255, el 20% de  255 y pasarlo a hexadecimal
 	signal a0 : STD_LOGIC_VECTOR (7 downto 0) := X"00"; -- agregamos led 0 -> intensidad % 10
-	signal a1 : STD_LOGIC_VECTOR (7 downto 0) := X"05";
-	signal a2 : STD_LOGIC_VECTOR (7 downto 0) := X"0A";
-	signal a3 : STD_LOGIC_VECTOR (7 downto 0) := X"14";
-	signal a4 : STD_LOGIC_VECTOR (7 downto 0) := X"1E";
-	signal a5 : STD_LOGIC_VECTOR (7 downto 0) := X"28";
-	signal a6 : STD_LOGIC_VECTOR (7 downto 0) := X"32";
-	signal a7 : STD_LOGIC_VECTOR (7 downto 0) := X"3C";
-	signal a8 : STD_LOGIC_VECTOR (7 downto 0) := X"46";
-	signal a9 : STD_LOGIC_VECTOR (7 downto 0) := X"50"; -- agregamos led 9 -> intensidad % 100
+	signal a1 : STD_LOGIC_VECTOR (7 downto 0) := X"19";
+	signal a2 : STD_LOGIC_VECTOR (7 downto 0) := X"33";
+	signal a3 : STD_LOGIC_VECTOR (7 downto 0) := X"4C";
+	signal a4 : STD_LOGIC_VECTOR (7 downto 0) := X"66";
+	signal a5 : STD_LOGIC_VECTOR (7 downto 0) := X"80";
+	signal a6 : STD_LOGIC_VECTOR (7 downto 0) := X"99";
+	signal a7 : STD_LOGIC_VECTOR (7 downto 0) := X"B3";
+	signal a8 : STD_LOGIC_VECTOR (7 downto 0) := X"CC";
+	signal a9 : STD_LOGIC_VECTOR (7 downto 0) := X"E6"; -- agregamos led 9 -> intensidad % 100
 	
 	begin
 		N1: divisor generic map (10) port map (reloj, relojPWM);
@@ -78,7 +78,7 @@ architecture Behavioral of Leds is
 
 				
 				
-				if direccionModulo2 = '1' then
+				if direccionModulo1 = '1' then
 					-- Desplazamiento de derecha a izquierda 
 				a0 <= a9;
 				a1 <= a0;
@@ -93,12 +93,13 @@ architecture Behavioral of Leds is
 				
 					-- Invertir dirección al llegar al valor minimo
 					if a9 = X"00" then
-						direccionModulo2 <= '0';
+						direccionModulo1 <= '0';
 					end if;
 					
 				else
 					 -- Desplazamiento de izquierda a derecha
-					a9 <= a0;
+					 
+				a9 <= a0;
 				a8 <= a9;
 				a7 <= a8;
 				a6 <= a7;
@@ -110,8 +111,8 @@ architecture Behavioral of Leds is
 				a0 <= a1;
 
 					-- Invertir dirección al llegar al valor maximo
-					if a0 = X"50" then
-						direccionModulo2 <= '1';
+					if a0 = X"E6" then
+						direccionModulo1 <= '1';
 					end if;
 					end if;
 			end if;
