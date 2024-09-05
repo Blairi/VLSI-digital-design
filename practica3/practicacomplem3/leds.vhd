@@ -22,7 +22,8 @@ architecture Behavioral of Leds is
 	
 	-- CAMBIO
 	-- Dirección de desplazamiento (1 para derecha a izquierda, 0 para izquierda a derecha)
-	signal direccion: std_logic := '1';
+	signal direccionModulo1: std_logic := '1';
+	signal direccionModulo2: std_logic := '1';
 	
 	component divisor is Generic ( N : integer := 24);
 		Port ( reloj : in std_logic;
@@ -41,16 +42,16 @@ architecture Behavioral of Leds is
 	
 	-- El porcentaje es incorrecto, ya que se debe  calcular en base a l rango de la cuenta, es decir,
 	--Sacar el 10% de 255, el 20% de  255 y pasarlo a hexadecimal
-	signal a0 : STD_LOGIC_VECTOR (7 downto 0) := X"0A"; -- agregamos led 0 -> intensidad % 10
-	signal a1 : STD_LOGIC_VECTOR (7 downto 0) := X"14";
-	signal a2 : STD_LOGIC_VECTOR (7 downto 0) := X"1E";
-	signal a3 : STD_LOGIC_VECTOR (7 downto 0) := X"28";
-	signal a4 : STD_LOGIC_VECTOR (7 downto 0) := X"32";
-	signal a5 : STD_LOGIC_VECTOR (7 downto 0) := X"3C";
-	signal a6 : STD_LOGIC_VECTOR (7 downto 0) := X"46";
-	signal a7 : STD_LOGIC_VECTOR (7 downto 0) := X"50";
-	signal a8 : STD_LOGIC_VECTOR (7 downto 0) := X"5A";
-	signal a9 : STD_LOGIC_VECTOR (7 downto 0) := X"64"; -- agregamos led 9 -> intensidad % 100
+	signal a0 : STD_LOGIC_VECTOR (7 downto 0) := X"00"; -- agregamos led 0 -> intensidad % 10
+	signal a1 : STD_LOGIC_VECTOR (7 downto 0) := X"05";
+	signal a2 : STD_LOGIC_VECTOR (7 downto 0) := X"0A";
+	signal a3 : STD_LOGIC_VECTOR (7 downto 0) := X"14";
+	signal a4 : STD_LOGIC_VECTOR (7 downto 0) := X"1E";
+	signal a5 : STD_LOGIC_VECTOR (7 downto 0) := X"28";
+	signal a6 : STD_LOGIC_VECTOR (7 downto 0) := X"32";
+	signal a7 : STD_LOGIC_VECTOR (7 downto 0) := X"3C";
+	signal a8 : STD_LOGIC_VECTOR (7 downto 0) := X"46";
+	signal a9 : STD_LOGIC_VECTOR (7 downto 0) := X"50"; -- agregamos led 9 -> intensidad % 100
 	
 	begin
 		N1: divisor generic map (10) port map (reloj, relojPWM);
@@ -74,43 +75,27 @@ architecture Behavioral of Leds is
 		
 		begin
 			if relojCiclo='1' and relojCiclo'event then
-			
-				if direccion = '1' then
-					-- Desplazamiento de derecha a izquierda 
-					a0 <= a9;
-					a1 <= a0;
-					a2 <= a1;
-					a3 <= a2;
-					a4 <= a3;
-					a5 <= a4;
-					a6 <= a5;
-					a7 <= a6;
-					a8 <= a7;
-					a9 <= a8;
+--				a0 <= a9;
+--				a1 <= a0;
+--				a2 <= a1;
+--				a3 <= a2;
+--				a4 <= a3;
+--				a5 <= a4;
+--				a6 <= a5;
+--				a7 <= a6;
+--				a8 <= a7;
+--				a9 <= a8;
 				
-					-- Invertir dirección al llegar al valor minimo
-					if a9 = X"0A" then
-						direccion <= '0';
-					end if;
-					
-				else
-					 -- Desplazamiento de izquierda a derecha
-					a9 <= a0;
-					a8 <= a9;
-					a7 <= a8;
-					a6 <= a7;
-					a5 <= a6;
-					a4 <= a5;
-					a3 <= a4;
-					a2 <= a3;
-					a1 <= a2;
-					a0 <= a1;
-
-					-- Invertir dirección al llegar al valor maximo
-					if a0 = X"64" then
-						direccion <= '1';
-					end if;
-					end if;
+				a9 <= a0;
+				a8 <= a9;
+				a7 <= a8;
+				a6 <= a7;
+				a5 <= a6;
+				a4 <= a5;
+				a3 <= a4;
+				a2 <= a3;
+				a1 <= a2;
+				a0 <= a1;
 			end if;
 	end process;
 	
