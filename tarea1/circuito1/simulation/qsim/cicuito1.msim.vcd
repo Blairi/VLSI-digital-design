@@ -1,0 +1,443 @@
+$comment
+	File created using the following command:
+		vcd file cicuito1.msim.vcd -direction
+$end
+$date
+	Mon Sep 09 16:56:05 2024
+$end
+$version
+	ModelSim Version 2020.1
+$end
+$timescale
+	1ps
+$end
+
+$scope module cicuito1_vhd_vec_tst $end
+$var wire 1 ! clk $end
+$var wire 1 " pin_name1 $end
+$var wire 1 # pin_name2 $end
+
+$scope module i1 $end
+$var wire 1 $ gnd $end
+$var wire 1 % vcc $end
+$var wire 1 & unknown $end
+$var wire 1 ' devoe $end
+$var wire 1 ( devclrn $end
+$var wire 1 ) devpor $end
+$var wire 1 * ww_devoe $end
+$var wire 1 + ww_devclrn $end
+$var wire 1 , ww_devpor $end
+$var wire 1 - ww_pin_name2 $end
+$var wire 1 . ww_clk $end
+$var wire 1 / ww_pin_name1 $end
+$var wire 1 0 \~QUARTUS_CREATED_ADC1~_CHSEL_bus\ [4] $end
+$var wire 1 1 \~QUARTUS_CREATED_ADC1~_CHSEL_bus\ [3] $end
+$var wire 1 2 \~QUARTUS_CREATED_ADC1~_CHSEL_bus\ [2] $end
+$var wire 1 3 \~QUARTUS_CREATED_ADC1~_CHSEL_bus\ [1] $end
+$var wire 1 4 \~QUARTUS_CREATED_ADC1~_CHSEL_bus\ [0] $end
+$var wire 1 5 \~QUARTUS_CREATED_ADC2~_CHSEL_bus\ [4] $end
+$var wire 1 6 \~QUARTUS_CREATED_ADC2~_CHSEL_bus\ [3] $end
+$var wire 1 7 \~QUARTUS_CREATED_ADC2~_CHSEL_bus\ [2] $end
+$var wire 1 8 \~QUARTUS_CREATED_ADC2~_CHSEL_bus\ [1] $end
+$var wire 1 9 \~QUARTUS_CREATED_ADC2~_CHSEL_bus\ [0] $end
+$var wire 1 : \clk~inputclkctrl_INCLK_bus\ [3] $end
+$var wire 1 ; \clk~inputclkctrl_INCLK_bus\ [2] $end
+$var wire 1 < \clk~inputclkctrl_INCLK_bus\ [1] $end
+$var wire 1 = \clk~inputclkctrl_INCLK_bus\ [0] $end
+$var wire 1 > \~QUARTUS_CREATED_GND~I_combout\ $end
+$var wire 1 ? \~QUARTUS_CREATED_UNVM~~busy\ $end
+$var wire 1 @ \~QUARTUS_CREATED_ADC1~~eoc\ $end
+$var wire 1 A \~QUARTUS_CREATED_ADC2~~eoc\ $end
+$var wire 1 B \pin_name2~output_o\ $end
+$var wire 1 C \clk~input_o\ $end
+$var wire 1 D \clk~inputclkctrl_outclk\ $end
+$var wire 1 E \inst1~feeder_combout\ $end
+$var wire 1 F \inst1~q\ $end
+$var wire 1 G \inst6~0_combout\ $end
+$var wire 1 H \pin_name1~input_o\ $end
+$var wire 1 I \inst6~combout\ $end
+$var wire 1 J \inst2~q\ $end
+$var wire 1 K \inst4~combout\ $end
+$var wire 1 L \inst~q\ $end
+$var wire 1 M \inst7~0_combout\ $end
+$var wire 1 N \inst7~feeder_combout\ $end
+$var wire 1 O \inst7~q\ $end
+$var wire 1 P \inst8~0_combout\ $end
+$var wire 1 Q \inst8~feeder_combout\ $end
+$var wire 1 R \inst8~q\ $end
+$var wire 1 S \inst9~0_combout\ $end
+$var wire 1 T \inst9~q\ $end
+$var wire 1 U \ALT_INV_inst7~q\ $end
+$var wire 1 V \ALT_INV_inst8~q\ $end
+$var wire 1 W \ALT_INV_inst9~q\ $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+1"
+1#
+0$
+1%
+x&
+1'
+1(
+1)
+1*
+1+
+1,
+1-
+0.
+1/
+0>
+z?
+z@
+zA
+1B
+0C
+0D
+0E
+0F
+1G
+1H
+1I
+0J
+1K
+0L
+1M
+1N
+0O
+1P
+1Q
+0R
+1S
+0T
+1U
+1V
+1W
+1:
+1;
+1<
+0=
+00
+01
+02
+03
+04
+05
+06
+07
+08
+09
+$end
+#10000
+1!
+1.
+1C
+1=
+1D
+1J
+1L
+1E
+1O
+0U
+0M
+0N
+#20000
+0!
+0.
+0C
+0=
+0D
+#30000
+1!
+1.
+1C
+1=
+1D
+1F
+0K
+#40000
+0!
+0.
+0C
+0=
+0D
+#50000
+1!
+1.
+1C
+1=
+1D
+0L
+0E
+#60000
+0!
+0.
+0C
+0=
+0D
+#70000
+1!
+1.
+1C
+1=
+1D
+0F
+1K
+#80000
+0!
+0.
+0C
+0=
+0D
+#90000
+1!
+1.
+1C
+1=
+1D
+1L
+1E
+0O
+1U
+1M
+1R
+1N
+0V
+0P
+0Q
+#100000
+0!
+0.
+0C
+0=
+0D
+#110000
+1!
+1.
+1C
+1=
+1D
+1F
+0K
+#120000
+0!
+0.
+0C
+0=
+0D
+#130000
+1!
+1.
+1C
+1=
+1D
+0L
+0E
+#140000
+0!
+0.
+0C
+0=
+0D
+#150000
+1!
+1.
+1C
+1=
+1D
+0F
+1K
+#160000
+0!
+0.
+0C
+0=
+0D
+#170000
+1!
+1.
+1C
+1=
+1D
+1L
+1E
+1O
+0U
+0M
+0N
+#180000
+0!
+0.
+0C
+0=
+0D
+#190000
+1!
+1.
+1C
+1=
+1D
+1F
+0K
+#200000
+0!
+0.
+0C
+0=
+0D
+#210000
+1!
+1.
+1C
+1=
+1D
+0L
+0E
+#220000
+0!
+0.
+0C
+0=
+0D
+#230000
+1!
+1.
+1C
+1=
+1D
+0F
+1K
+#240000
+0!
+0.
+0C
+0=
+0D
+#250000
+1!
+1.
+1C
+1=
+1D
+1L
+1E
+0O
+1U
+1M
+0R
+1N
+1V
+1P
+1T
+1Q
+0W
+0S
+0B
+0-
+0#
+#260000
+0!
+0.
+0C
+0=
+0D
+#270000
+1!
+1.
+1C
+1=
+1D
+1F
+0K
+#280000
+0!
+0.
+0C
+0=
+0D
+#290000
+1!
+1.
+1C
+1=
+1D
+0L
+0E
+#300000
+0!
+0.
+0C
+0=
+0D
+#310000
+1!
+1.
+1C
+1=
+1D
+0F
+1K
+#320000
+0!
+0.
+0C
+0=
+0D
+#330000
+1!
+1.
+1C
+1=
+1D
+1L
+1E
+1O
+0U
+0M
+0N
+#340000
+0!
+0.
+0C
+0=
+0D
+#350000
+1!
+1.
+1C
+1=
+1D
+1F
+0K
+#360000
+0!
+0.
+0C
+0=
+0D
+#370000
+1!
+1.
+1C
+1=
+1D
+0L
+0E
+#380000
+0!
+0.
+0C
+0=
+0D
+#390000
+1!
+1.
+1C
+1=
+1D
+0F
+1K
+#400000
