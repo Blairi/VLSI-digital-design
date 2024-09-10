@@ -1,0 +1,80 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/quartus_projects/tarea1/circuito2/simulation/qsim
+vcircuito2
+Z1 !s110 1725944394
+!i10b 1
+!s100 O<:887;[6=cOhndk]7GB01
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I;jih9Z20EI`D;PQR4iLgk2
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z4 w1725944393
+Z5 8circuito2.vo
+Z6 Fcircuito2.vo
+!i122 59
+L0 32 361
+Z7 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z8 !s108 1725944394.000000
+Z9 !s107 circuito2.vo|
+Z10 !s90 -work|work|circuito2.vo|
+!i113 1
+Z11 o-work work
+Z12 tCvgOpt 0
+vcircuito2_vlg_vec_tst
+!s110 1725944395
+!i10b 1
+!s100 >c]G^mdoJDDlMkD@1^dY?3
+R2
+Ihfola8Rljo^T2`;hG?4_i0
+R3
+R0
+R4
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+!i122 60
+L0 30 42
+R7
+r1
+!s85 0
+31
+!s108 1725944395.000000
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R11
+R12
+vhard_block
+R1
+!i10b 1
+!s100 @RTLW;:5AkQgfn;^;<i[D0
+R2
+Id_@C>`U_[hhTh`XV?`=990
+R3
+R0
+R4
+R5
+R6
+!i122 59
+L0 394 45
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+R12
