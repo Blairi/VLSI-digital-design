@@ -7,7 +7,12 @@ entity TEC_MATRIX_4X4 is
 		COLUMNAS: in std_logic_vector(3 downto 0);
 		FILAS: out std_logic_vector(3 downto 0);
 		IND: out std_logic;
-		DISPLAY: OUT std_logic_vector(6 downto 0));
+		DISPLAY1: OUT std_logic_vector(6 downto 0);
+		DISPLAY2: OUT std_logic_vector(6 downto 0);
+		DISPLAY3: OUT std_logic_vector(6 downto 0);
+		DISPLAY4: OUT std_logic_vector(6 downto 0);
+		DISPLAY5: OUT std_logic_vector(6 downto 0);
+		DISPLAY6: OUT std_logic_vector(6 downto 0));
 end TEC_MATRIX_4X4;
 
 architecture behavioral of TEC_MATRIX_4X4 is
@@ -161,7 +166,7 @@ END PROCESS;
 --------------------------------------
 
  with BOTON_PRES select
-  display <= "1000000" when X"0",
+  display1 <= "1000000" when X"0",
 				 "1111001" when X"1",
 				 "0100100" when X"2",
 				 "0110000" when X"3",
@@ -178,4 +183,101 @@ END PROCESS;
 				 "0000110" when X"E",
 				 "0001110" when X"F",
 				 "1111111" when others;
+				 
+	with BOTON_PRES select
+  display2 <= "1000000" when X"0",
+				 "1111001" when X"1",
+				 "0100100" when X"2",
+				 "0110000" when X"3",
+				 "0011001" when X"4",
+				 "0010010" when X"5",
+				 "0000010" when X"6",
+				 "1111000" when X"7",
+				 "0000000" when X"8",
+				 "0010000" when X"9",
+				 "0001000" when X"A",
+				 "0000011" when X"B",
+				 "1000110" when X"C",
+				 "0100001" when X"D",
+				 "0000110" when X"E",
+				 "0001110" when X"F",
+				 "1111111" when others;
+				 
+	with BOTON_PRES select
+  display3 <= "1000000" when X"0",
+				 "1111001" when X"1",
+				 "0100100" when X"2",
+				 "0110000" when X"3",
+				 "0011001" when X"4",
+				 "0010010" when X"5",
+				 "0000010" when X"6",
+				 "1111000" when X"7",
+				 "0000000" when X"8",
+				 "0010000" when X"9",
+				 "0001000" when X"A",
+				 "0000011" when X"B",
+				 "1000110" when X"C",
+				 "0100001" when X"D",
+				 "0000110" when X"E",
+				 "0001110" when X"F",
+				 "1111111" when others;
+	
+	with BOTON_PRES select
+  display4 <= "1000000" when X"0",
+				 "1111001" when X"1",
+				 "0100100" when X"2",
+				 "0110000" when X"3",
+				 "0011001" when X"4",
+				 "0010010" when X"5",
+				 "0000010" when X"6",
+				 "1111000" when X"7",
+				 "0000000" when X"8",
+				 "0010000" when X"9",
+				 "0001000" when X"A",
+				 "0000011" when X"B",
+				 "1000110" when X"C",
+				 "0100001" when X"D",
+				 "0000110" when X"E",
+				 "0001110" when X"F",
+				 "1111111" when others;
+				 
+	with BOTON_PRES select
+  display5 <= "1000000" when X"0",
+				 "1111001" when X"1",
+				 "0100100" when X"2",
+				 "0110000" when X"3",
+				 "0011001" when X"4",
+				 "0010010" when X"5",
+				 "0000010" when X"6",
+				 "1111000" when X"7",
+				 "0000000" when X"8",
+				 "0010000" when X"9",
+				 "0001000" when X"A",
+				 "0000011" when X"B",
+				 "1000110" when X"C",
+				 "0100001" when X"D",
+				 "0000110" when X"E",
+				 "0001110" when X"F",
+				 "1111111" when others;
+				 
+	with BOTON_PRES select
+  display6 <= "1000000" when X"0",
+				 "1111001" when X"1",
+				 "0100100" when X"2",
+				 "0110000" when X"3",
+				 "0011001" when X"4",
+				 "0010010" when X"5",
+				 "0000010" when X"6",
+				 "1111000" when X"7",
+				 "0000000" when X"8",
+				 "0010000" when X"9",
+				 "0001000" when X"A",
+				 "0000011" when X"B",
+				 "1000110" when X"C",
+				 "0100001" when X"D",
+				 "0000110" when X"E",
+				 "0001110" when X"F",
+				 "1111111" when others;
+				 
+				
 END behavioral;
