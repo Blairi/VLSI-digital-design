@@ -173,9 +173,9 @@ END PROCESS;
 				 "0010000" when X"9",
 				 "0001000" when X"A",
 				 "0000011" when X"B",
-				 "0100010" when X"C",
+				 "1000110" when X"C",
 				 "0100001" when X"D",
 				 "0000110" when X"E",
-				 "0101010" when X"F",
+				 "0001110" when X"F",
 				 "1111111" when others;
 END behavioral;
