@@ -7,6 +7,8 @@ entity TEC_MATRIX_4X4 is
 		COLUMNAS: in std_logic_vector(3 downto 0);
 		FILAS: out std_logic_vector(3 downto 0);
 		IND: out std_logic;
+		button: in std_logic;
+		buzzer : OUT std_logic;
 		DISPLAY1: OUT std_logic_vector(6 downto 0);
 		DISPLAY2: OUT std_logic_vector(6 downto 0);
 		DISPLAY3: OUT std_logic_vector(6 downto 0);
@@ -163,7 +165,20 @@ BEGIN
 		END IF;
 	END IF;
 END PROCESS;
+
+-- Proceso para detectar la pulsación del botón
+process(clk)
+    begin
+        if rising_edge(clk) then
+            if button = '0' then          -- Botón presionado (normalmente '0' indica presión, verifica esto)
+                buzzer <= '1';            -- Encender el buzzer
+            else
+                buzzer <= '0';            -- Apagar el buzzer cuando el botón no está presionado
+            end if;
+        end if;
+ end process;
 --------------------------------------
+	
 
  with BOTON_PRES select
   display1 <= "1000000" when X"0",
