@@ -45,6 +45,18 @@ architecture behavioral of TEC_MATRIX_4X4 is
 	SIGNAL FILA_REG_S : STD_LOGIC_VECTOR(3 DOWNTO 0);
 	SIGNAL FILA: INTEGER := 0;
 	SIGNAL BOTON_PRES : STD_LOGIC_VECTOR(3 DOWNTO 0);
+	
+	-- Estados de la FSM
+    type state_type is (IDLE, CHECK_KEY, NEXT_KEY, SUCCESS, FAIL);
+    signal state, next_state : state_type;
+	 
+	 -- Contraseña y contador
+    signal password : std_logic_vector(3 downto 0) := "0000"; -- Almacena el código introducido
+    signal count : integer := 0; -- Contador para las teclas
+	 
+	 -- Variables para la tecla leída
+    signal current_key : std_logic_vector(3 downto 0);
+	 
 BEGIN
 	FILAS <= FILA_REG_S;
 --RETARDO 1 MS--
@@ -89,6 +101,9 @@ WITH FILA SELECT
 						"0100" WHEN 1,
 						"0010" WHEN 2,
 						"0001" WHEN OTHERS;
+
+
+						
 -------------------------------
 ----------PROCESO EN EL TECLADO AL SELECCIONAR UN VALOR------------
 PROCESS(CLK,BANDERA)
@@ -177,6 +192,58 @@ process(clk)
             end if;
         end if;
  end process;
+ 
+ 
+  -- Lógica de transición de estados
+    process(state, current_key, count)
+    begin
+        case state is
+            when IDLE =>
+                -- Esperando la primera tecla
+                if current_key /= "0000" then -- si una tecla es presionada
+                    next_state <= CHECK_KEY;
+                else
+                    next_state <= IDLE;
+                end if;
+            
+            when CHECK_KEY =>
+                -- Verifica la tecla
+                if (count = 0 and current_key = "0001") or -- '1'
+                   (count = 1 and current_key = "0010") or -- '2'
+                   (count = 2 and current_key = "0011") or -- '3'
+                   (count = 3 and current_key = "0100") then -- '4'
+                    next_state <= NEXT_KEY;
+                else
+                    next_state <= FAIL;
+                end if;
+            
+            when NEXT_KEY =>
+                -- Avanza al siguiente dígito
+                count <= count + 1;
+                if count = 3 then
+                    next_state <= SUCCESS;
+                else
+                    next_state <= IDLE;
+                end if;
+
+            when SUCCESS =>
+                -- Contraseña correcta
+                correct_led <= '1';
+                wrong_led <= '0';
+                next_state <= IDLE;
+
+            when FAIL =>
+                -- Contraseña incorrecta
+                correct_led <= '0';
+                wrong_led <= '1';
+                next_state <= IDLE;
+            
+            when others =>
+                next_state <= IDLE;
+        end case;
+    end process;
+ 
+ 
 --------------------------------------
 	
 
