@@ -1,21 +1,33 @@
 # DE10-Lite  Cheat Sheet
 
-## PIN Assignment
 
-### PIN Assignment of Clocks Inputs
+**Summary**
+- [PIN Assignment](#pin-assignment)
+    - [PIN Assignment of Clocks Inputs](#pin-clk)
+    - [PIN Assignment of Push-buttons](#pin-push)
+    - [PIN Assignment of Slide Switches](#pin-sw)
+    - [PIN Assignment of LEDs](#pin-leds)
+    - [PIN Assignment of 7-segment Displays](#pin-d7)
+- [GPIOs](#pin-gpios)
+
+
+
+## PIN Assignment<a name="pin-assignment"></a>
+
+### PIN Assignment of Clocks Inputs<a name="pin-clk"></a>
 | Signal Name | FPGA Pin No. | Desc |
 |----------|----------|----------|
 | ADC_CLK_10    | PIN_N5   | 10 Mhz clock input for ADC (Bank 3B)   |
 | MAX10_CLK1_50    | PIN_P11   | 50 Mhz clock input for ADC (Bank 3B)   |
 | MAX10_CLK2_50    | PIN_N14   | 50 Mhz clock input for ADC (Bank 3B)  |
 
-### PIN Assignment of Push-buttons
+### PIN Assignment of Push-buttons<a name="pin-push"></a>
 | Signal Name | FPGA Pin No. | Desc |
 |----------|----------|----------|
 | KEY0    | PIN_B8   | Push-button[0] |
 | KEY1    | PIN_A7   | Push-button[1] |
 
-### PIN Assignment of Slide Switches
+### PIN Assignment of Slide Switches<a name="pin-sw"></a>
 | Signal Name | FPGA Pin No. | Desc |
 |----------|----------|----------|
 | SW0    | PIN_C10   | Slide Switch[0] |
@@ -29,7 +41,7 @@
 | SW8    | PIN_B14   | Slide Switch[8] |
 | SW9    | PIN_F15   | Slide Switch[9] |
 
-### PIN Assignment of LEDs
+### PIN Assignment of LEDs<a name="pin-leds"></a>
 | Signal Name | FPGA Pin No. | Desc |
 |----------|----------|----------|
 | LEDR0    | PIN_A8   | LED[0] |
@@ -43,7 +55,7 @@
 | LEDR8    | PIN_A11   | LED[8] |
 | LEDR9    | PIN_B11   | LED[9] |
 
-### PIN Assignment of 7-segment Displays
+### PIN Assignment of 7-segment Displays<a name="pin-d7"></a>
 | Signal Name | FPGA Pin No. | Desc |
 |----------|----------|----------|
 |DISPLAY 0    |    | |
@@ -101,5 +113,5 @@
 | HEX56    | PIN_N20   | Seven Segment Digit 5[6] |
 | HEX57    | PIN_L19   | Seven Segment Digit 5[7], DP |
 
-## GPIOs
+## GPIOs<a name="pin-gpios"></a>
 ![GPIOs DE10-LITE](./GPIOsDe10lite.png)
