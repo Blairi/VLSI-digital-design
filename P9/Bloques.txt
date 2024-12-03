@@ -1,0 +1,251 @@
+PRIMER RECUADRO ( switch 1):
+--A
+if ((row > 71 and row < 107) and (column > 36 and column < 71)) then
+        red <= (others => '0');
+        green <= (others => '0');
+        blue <= (others => '1');
+		--B
+      elsif ((row > 18 and row < 53) and (column > 89 and column < 124)) then
+        red <= (others => '0');
+        green <= (others => '0');
+        blue <= (others => '1');
+		--C
+      elsif ((row > 53 and row < 124) and (column > 71 and column < 142)) then
+        red <= (others => '1');
+        green <= (others => '1');
+        blue <= (others => '0');
+		  --D
+		  elsif ((row > 124 and row < 142) and (column > 71 and column < 89)) then
+        red <= (others => '0');
+        green <= (others => '1');
+        blue <= (others => '0');
+		  --E
+		  elsif ((row > 124 and row < 142) and (column > 124 and column < 142)) then
+        red <= (others => '0');
+        green <= (others => '1');
+        blue <= (others => '0');
+
+SEGUNDO RECUADRO( switch 2):
+
+--A
+      if ((row > 71 and row < 107) and (column > 249 and column < 284)) then
+        red <= (others => '0');
+        green <= (others => '0');
+        blue <= (others => '1');
+		--B
+      elsif ((row > 18 and row < 53) and (column > 302 and column < 337)) then
+        red <= (others => '0');
+        green <= (others => '0');
+        blue <= (others => '1');
+		--C
+      elsif ((row > 53 and row < 124) and (column > 284 and column < 355)) then
+        red <= (others => '1');
+        green <= (others => '1');
+        blue <= (others => '0');
+		  --D
+		  elsif ((row > 124 and row < 142) and (column > 284 and column < 302)) then
+        red <= (others => '0');
+        green <= (others => '1');
+        blue <= (others => '0');
+		  --E
+		  elsif ((row > 124 and row < 142) and (column > 337 and column < 355)) then
+        red <= (others => '0');
+        green <= (others => '1');
+        blue <= (others => '0');
+
+TERCER RECUADRO ( switch 3):
+
+--A
+      if ((row > 71 and row < 107) and (column > 462 and column < 497)) then
+        red <= (others => '0');
+        green <= (others => '0');
+        blue <= (others => '1');
+		--B
+      elsif ((row > 18 and row < 53) and (column > 515 and column < 550)) then
+        red <= (others => '0');
+        green <= (others => '0');
+        blue <= (others => '1');
+		--C
+      elsif ((row > 53 and row < 124) and (column > 497 and column < 568)) then
+        red <= (others => '1');
+        green <= (others => '1');
+        blue <= (others => '0');
+		  --D
+		  elsif ((row > 124 and row < 142) and (column > 497 and column < 515)) then
+        red <= (others => '0');
+        green <= (others => '1');
+        blue <= (others => '0');
+		  --E
+		  elsif ((row > 124 and row < 142) and (column > 550 and column < 568)) then
+        red <= (others => '0');
+        green <= (others => '1');
+        blue <= (others => '0');
+		  
+CUARTO RECUADRO ( switch 4):
+
+--A
+		if ((row > 231 and row < 267) and (column > 36 and column < 71)) then
+        red <= (others => '0');
+        green <= (others => '0');
+        blue <= (others => '1');
+		--B
+      elsif ((row > 178 and row < 213) and (column > 89 and column < 124)) then
+        red <= (others => '0');
+        green <= (others => '0');
+        blue <= (others => '1');
+		--C
+      elsif ((row > 213 and row < 284) and (column > 71 and column < 142)) then
+        red <= (others => '1');
+        green <= (others => '1');
+        blue <= (others => '0');
+		  --D
+		  elsif ((row > 284 and row < 302) and (column > 71 and column < 89)) then
+        red <= (others => '0');
+        green <= (others => '1');
+        blue <= (others => '0');
+		  --E
+		  elsif ((row > 284 and row < 302) and (column > 124 and column < 142)) then
+        red <= (others => '0');
+        green <= (others => '1');
+        blue <= (others => '0');
+
+ QUINTO RECUADRO CENTRO(Ningun switch activo):
+
+--A
+		if ((row > 231 and row < 267) and (column > 249 and column < 284)) then
+        red <= (others => '0');
+        green <= (others => '0');
+        blue <= (others => '1');
+		--B
+      elsif ((row > 178 and row < 213) and (column > 302 and column < 337)) then
+        red <= (others => '0');
+        green <= (others => '0');
+        blue <= (others => '1');
+		--C
+      elsif ((row > 213 and row < 284) and (column > 284 and column < 355)) then
+        red <= (others => '1');
+        green <= (others => '1');
+        blue <= (others => '0');
+		  --D
+		  elsif ((row > 284 and row < 302) and (column > 284 and column < 302)) then
+        red <= (others => '0');
+        green <= (others => '1');
+        blue <= (others => '0');
+		  --E
+		  elsif ((row > 284 and row < 302) and (column > 337 and column < 355)) then
+        red <= (others => '0');
+        green <= (others => '1');
+        blue <= (others => '0');
+
+SEXTO RECUADRO ( switch 5):
+
+	--A
+		if ((row > 231 and row < 267) and (column > 462 and column < 497)) then
+        red <= (others => '0');
+        green <= (others => '0');
+        blue <= (others => '1');
+		--B
+      elsif ((row > 178 and row < 213) and (column > 515 and column < 550)) then
+        red <= (others => '0');
+        green <= (others => '0');
+        blue <= (others => '1');
+		--C
+      elsif ((row > 213 and row < 284) and (column > 497 and column < 568)) then
+        red <= (others => '1');
+        green <= (others => '1');
+        blue <= (others => '0');
+		  --D
+		  elsif ((row > 284 and row < 302) and (column > 497 and column < 515)) then
+        red <= (others => '0');
+        green <= (others => '1');
+        blue <= (others => '0');
+		  --E
+		  elsif ((row > 284 and row < 302) and (column > 550 and column < 568)) then
+        red <= (others => '0');
+        green <= (others => '1');
+        blue <= (others => '0');
+
+SEPTIMO RECUADRO ( switch 6):
+
+--A
+	if ((row > 391 and row < 427) and (column > 36 and column < 71)) then
+        red <= (others => '0');
+        green <= (others => '0');
+        blue <= (others => '1');
+		--B
+      elsif ((row > 338 and row < 373) and (column > 89 and column < 124)) then
+        red <= (others => '0');
+        green <= (others => '0');
+        blue <= (others => '1');
+		--C
+      elsif ((row > 373 and row < 444) and (column > 71 and column < 142)) then
+        red <= (others => '1');
+        green <= (others => '1');
+        blue <= (others => '0');
+		  --D
+		  elsif ((row > 444 and row < 462) and (column > 71 and column < 89)) then
+        red <= (others => '0');
+        green <= (others => '1');
+        blue <= (others => '0');
+		  --E
+		  elsif ((row > 444 and row < 462) and (column > 124 and column < 142)) then
+        red <= (others => '0');
+        green <= (others => '1');
+        blue <= (others => '0');
+
+OCTAVO RECUADRO ( switch 7):
+
+--A
+	if ((row > 391 and row < 427) and (column > 249 and column < 284)) then
+        red <= (others => '0');
+        green <= (others => '0');
+        blue <= (others => '1');
+		--B
+      elsif ((row > 338 and row < 373) and (column > 302 and column < 337)) then
+        red <= (others => '0');
+        green <= (others => '0');
+        blue <= (others => '1');
+		--C
+      elsif ((row > 373 and row < 444) and (column > 284 and column < 355)) then
+        red <= (others => '1');
+        green <= (others => '1');
+        blue <= (others => '0');
+		  --D
+		  elsif ((row > 444 and row < 462) and (column > 284 and column < 302)) then
+        red <= (others => '0');
+        green <= (others => '1');
+        blue <= (others => '0');
+		  --E
+		  elsif ((row > 444 and row < 462) and (column > 337 and column < 355)) then
+        red <= (others => '0');
+        green <= (others => '1');
+        blue <= (others => '0');
+
+NOVENO RECUADRO ( switch 8):
+
+	--A
+	if ((row > 391 and row < 427) and (column > 462 and column < 497)) then
+        red <= (others => '0');
+        green <= (others => '0');
+        blue <= (others => '1');
+		--B
+      elsif ((row > 338 and row < 373) and (column > 515 and column < 550)) then
+        red <= (others => '0');
+        green <= (others => '0');
+        blue <= (others => '1');
+		--C
+      elsif ((row > 373 and row < 444) and (column > 497 and column < 568)) then
+        red <= (others => '1');
+        green <= (others => '1');
+        blue <= (others => '0');
+		  --D
+		  elsif ((row > 444 and row < 462) and (column > 497 and column < 515)) then
+        red <= (others => '0');
+        green <= (others => '1');
+        blue <= (others => '0');
+		  --E
+		  elsif ((row > 444 and row < 462) and (column > 550 and column < 568)) then
+        red <= (others => '0');
+        green <= (others => '1');
+        blue <= (others => '0');
+		  
